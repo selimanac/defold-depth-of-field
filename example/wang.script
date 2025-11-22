@@ -1,0 +1,77 @@
+local dof = require("dof.dof")
+
+local mode = 1
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "clear_color", { color = vmath.vector4(65 / 255, 62 / 255, 87 / 255, 1) })
+
+	local light_position = go.get_position("/light")
+	local light = vmath.vector4(light_position.x, light_position.y, light_position.z, 0)
+	go.set("/wang#wang", "light", light)
+	go.set("/moped#model", "light", light)
+
+	-- ==================================================================
+	-- DOF - Settings
+	-- ==================================================================
+	-- Camera parameters for depth linearization (must match camera settings in main.collection)
+	-- near_z: 0.1, far_z: 1000.0 from camera component
+	local far_z = camera.get_far_z(msg.url("/camera#camera"))
+	local near_z = camera.get_near_z(msg.url("/camera#camera"))
+	dof.set_camera_params(near_z, far_z)
+
+	-- Depth distance parameters (adjust based on your scene scale)
+	-- min_distance: Depth difference from focus point where blur starts
+	-- max_distance: Depth difference where blur reaches maximum
+	dof.set_distance(1.0, 4.0)
+
+	-- Focus point (0.5, 0.5 = screen center)
+	-- The depth at this screen location becomes the focus depth
+	dof.set_focus(0.5, 0.5)
+
+	-- DoF Mode Selection:
+	-- Mode 0: Depth-only (default) - focuses entire depth planes
+	--dof.set_dof_mode(0)
+
+	-- Mode 1: Radial hybrid - combines depth with screen-space distance for localized focus
+	--dof.set_dof_mode(1, 18.0) -- 2.0 is screen-space weight (higher = stronger screen-space influence)
+
+	-- Mode 2: Circular region - sharp focus in a screen-space circle around cursor
+	--dof.set_dof_mode(2, nil, 0.15) -- 0.15 is focus radius (0.0-1.0)
+
+	-- Gaussian blur settings
+	-- gaussian_sigma: controls blur strength  2.0 for balanced quality
+	-- gaussian_kernel_size: samples in each direction 3-5 for good quality/performance balance
+	dof.set_gaussian_blur(3, 5)
+
+	-- Box blur settings
+	-- blur_size: Kernel size (2-5 recommended, higher = slower but smoother)
+	-- blur_separation: Sample spacing (1.0-2.0 recommended)
+	-- dof.set_box_blur(3.0, 2.0)
+	-- ==================================================================
+end
+
+function update(self, dt)
+	msg.post("@render:", "draw_text", { text = "CLICK ON SCREEN / Mode: " .. mode, position = vmath.vector3(20, 50, 0) })
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("mode1") and action.pressed then
+		dof.set_dof_mode(0)
+		mode = 1
+	elseif action_id == hash("mode2") and action.pressed then
+		dof.set_dof_mode(1, 18.0)
+		mode = 2
+	elseif action_id == hash("mode3") and action.pressed then
+		dof.set_dof_mode(2, nil, 0.2)
+		mode = 3
+	end
+
+	local w, h = window.get_size()
+	if mode == 3 and action.screen_x then
+		dof.set_focus(action.screen_x / w, action.screen_y / h)
+	end
+	if action_id == hash("touch") and action.pressed then
+		dof.set_focus(action.screen_x / w, action.screen_y / h)
+	end
+end

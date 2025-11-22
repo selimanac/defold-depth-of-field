@@ -1,0 +1,28 @@
+key_trigger {
+  input: KEY_1
+  action: "mode1"
+}
+key_trigger {
+  input: KEY_2
+  action: "mode2"
+}
+key_trigger {
+  input: KEY_3
+  action: "mode3"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_LEFT
+  action: "touch"
+}
+mouse_trigger {
+  input: MOUSE_WHEEL_UP
+  action: "mouse_wheel_up"
+}
+mouse_trigger {
+  input: MOUSE_WHEEL_DOWN
+  action: "mouse_wheel_down"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_RIGHT
+  action: "rotate"
+}

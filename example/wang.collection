@@ -1,0 +1,102 @@
+name: "viking"
+instances {
+  id: "render_target"
+  prototype: "/dof/render_target.go"
+}
+scale_along_z: 0
+embedded_instances {
+  id: "wang"
+  data: "components {\n"
+  "  id: \"wang\"\n"
+  "  component: \"/example/assets/models/wang.model\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "camera"
+  data: "components {\n"
+  "  id: \"orbit\"\n"
+  "  component: \"/example/orbit.script\"\n"
+  "  properties {\n"
+  "    id: \"zoom\"\n"
+  "    value: \"1.5\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"zoom_speed\"\n"
+  "    value: \"0.05\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"offset\"\n"
+  "    value: \"0.2, 0.1, 0.0\"\n"
+  "    type: PROPERTY_TYPE_VECTOR3\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"wang\"\n"
+  "    value: \"true\"\n"
+  "    type: PROPERTY_TYPE_BOOLEAN\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 1.5\\n"
+  "near_z: 0.1\\n"
+  "far_z: 80.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "scripts"
+  data: "components {\n"
+  "  id: \"wang\"\n"
+  "  component: \"/example/wang.script\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "light"
+  data: ""
+  position {
+    x: 8.192355
+    y: 3.347827
+    z: 10.893964
+  }
+}
+embedded_instances {
+  id: "moped"
+  data: "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/assets/models/moped.glb\\\"\\n"
+  "name: \\\"{{NAME}}\\\"\\n"
+  "materials {\\n"
+  "  name: \\\"Alena_Shek______________________________default\\\"\\n"
+  "  material: \\\"/example/materials/model_instanced.material\\\"\\n"
+  "  textures {\\n"
+  "    sampler: \\\"tex0\\\"\\n"
+  "    texture: \\\"/example/assets/images/moped.png\\\"\\n"
+  "  }\\n"
+  "}\\n"
+  "create_go_bones: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.680559\n"
+  "    z: -0.404842\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -1.713964
+    y: -0.722957
+    z: -2.037455
+  }
+  rotation {
+    y: -0.2651103
+    w: 0.9642181
+  }
+}

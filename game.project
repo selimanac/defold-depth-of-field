@@ -1,0 +1,44 @@
+[bootstrap]
+main_collection = /example/wang.collectionc
+render = /dof/render/dof.renderc
+
+[script]
+shared_state = 1
+
+[display]
+width = 1280
+height = 720
+high_dpi = 1
+samples = 2
+
+[android]
+input_method = HiddenInputField
+package = com.defold.example.basic3d
+
+[project]
+dependencies = 
+title = dof
+
+[physics]
+type = 3D
+
+[osx]
+bundle_identifier = com.defold.example.basic3d
+
+[ios]
+bundle_identifier = com.defold.example.basic3d
+
+[html5]
+scale_mode = stretch
+
+[render]
+clear_color_red = 0.5
+clear_color_green = 0.5
+clear_color_blue = 0.5
+
+[shader]
+exclude_gles_sm100 = 1
+
+[library]
+include_dirs = dof
+

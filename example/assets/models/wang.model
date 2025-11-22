@@ -1,0 +1,107 @@
+mesh: "/example/assets/models/wang.glb"
+name: "viking"
+materials {
+  name: "Bag1Material"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/Bag1Color.png"
+  }
+}
+materials {
+  name: "Bag2Material"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/Bag2Color.png"
+  }
+}
+materials {
+  name: "BodyMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/BodyColor.png"
+  }
+}
+materials {
+  name: "EarphoneMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/EarphoneColor.png"
+  }
+}
+materials {
+  name: "FaceMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/FaceColor.png"
+  }
+}
+materials {
+  name: "Grenade1Material"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/Granade1Color.png"
+  }
+}
+materials {
+  name: "Grenade2Material"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/Granade2Color.png"
+  }
+}
+materials {
+  name: "HairMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/HairColor.png"
+  }
+}
+materials {
+  name: "HolsterMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/HosterColor.png"
+  }
+}
+materials {
+  name: "PistolMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/PistolColor.png"
+  }
+}
+materials {
+  name: "RifleMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/RifleColor.png"
+  }
+}
+materials {
+  name: "SkyColor"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/SkyColor.png"
+  }
+}
+materials {
+  name: "StationMaterial"
+  material: "/example/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/wang/StationColor.png"
+  }
+}
+create_go_bones: false

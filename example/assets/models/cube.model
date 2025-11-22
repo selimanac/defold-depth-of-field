@@ -1,0 +1,10 @@
+mesh: "/builtins/assets/meshes/cube.dae"
+name: "unnamed"
+materials {
+  name: "default"
+  material: "/builtins/materials/model_instanced.material"
+  textures {
+    sampler: "tex0"
+    texture: "/example/assets/images/green.png"
+  }
+}
