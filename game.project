@@ -17,7 +17,7 @@ package = com.defold.example.basic3d
 
 [project]
 dependencies = 
-title = dof
+title = Defold 3D Depth of Field (DoF)
 
 [physics]
 type = 3D

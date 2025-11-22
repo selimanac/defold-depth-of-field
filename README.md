@@ -10,7 +10,7 @@ exclude_gles_sm100 = 1
 ```
 
 
---
+---
 
 ## Toss a Coin to Your Witcher
 If you find my [Defold Extensions](https://github.com/selimanac) useful for your projects, please consider [supporting](https://github.com/sponsors/selimanac) it.  
