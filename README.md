@@ -2,13 +2,6 @@
 
 ![DoF](/.github/dof.png?raw=true)
 
-> [!WARNING]
-> You have to set `shader.exclude_gles_sm100 = 1 in your game.project`
-
-```ini
-[shader]
-exclude_gles_sm100 = 1
-```
 
 
 ---
@@ -20,7 +13,18 @@ I'd love to hear about your projects! Please share your released projects that u
 
 ---
 
+
+> [!WARNING]
+> You have to set `shader.exclude_gles_sm100 = 1 in your game.project`
+
+```ini
+[shader]
+exclude_gles_sm100 = 1
+```
+
 ## API Reference
+
+
 
 The DoF module (`dof/dof.lua`) provides the following API functions:
 
