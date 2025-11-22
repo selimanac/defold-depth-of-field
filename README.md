@@ -1,5 +1,6 @@
 # Defold 3D Depth of Field (DoF)
 
+![DoF](/.github/dof.png?raw=true)
 
 > [!WARNING]
 > You have to set `shader.exclude_gles_sm100 = 1 in your game.project`
