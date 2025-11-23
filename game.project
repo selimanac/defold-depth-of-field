@@ -42,3 +42,6 @@ exclude_gles_sm100 = 1
 [library]
 include_dirs = dof
 
+[graphics]
+texture_profiles = /default.texture_profiles
+
