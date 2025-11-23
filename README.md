@@ -3,7 +3,19 @@
 ![DoF](/.github/dof.png?raw=true)
 
 
-Test: https://selimanac.github.io/defold-depth-of-field/  
+## Installation
+
+You can use the DoF in your own project by adding this project as a [Defold library dependency](https://defold.com/manuals/libraries/#setting-up-library-dependencies).  
+Open your `game.project` file, select  `Project` and add a  `Dependencies` field:
+
+
+>https://github.com/selimanac/defold-depth-of-field/archive/refs/heads/main.zip  
+
+
+
+See it in action:   
+https://selimanac.github.io/defold-depth-of-field/  
+(The textures are large, it may take some time to load)  
 
 ---
 
