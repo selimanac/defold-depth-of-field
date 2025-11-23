@@ -14,8 +14,15 @@ Open your `game.project` file, select  `Project` and add a  `Dependencies` field
 
 
 See it in action:   
-https://selimanac.github.io/defold-depth-of-field/  
 (The textures are large, it may take some time to load)  
+
+- Click left mouse button to focus
+- Hold right mouse button to rotate
+- 1 -2- 3 keys to change the mode (1- Depth-only, 2- Radial hybrid, 3- Circular region)
+- Mouse wheel to zoom
+
+https://selimanac.github.io/defold-depth-of-field/  
+
 
 ---
 
