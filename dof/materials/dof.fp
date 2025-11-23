@@ -15,7 +15,7 @@ uniform fs_uniforms
 
 out vec4 out_fragColor;
 
-// Linearize depth value from hardware depth buffer
+// Linearize depth value from  depth buffer
 // Converts non-linear depth [0,1] to linear view-space depth
 // Get depth at this pixel
 // From https://learnopengl.com/Advanced-OpenGL/Depth-testing

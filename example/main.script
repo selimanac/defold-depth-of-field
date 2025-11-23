@@ -16,8 +16,7 @@ function init(self)
 	-- ==================================================================
 	-- DOF - Settings
 	-- ==================================================================
-	-- Camera parameters for depth linearization (must match camera settings in main.collection)
-	-- near_z: 0.1, far_z: 1000.0 from camera component
+	-- Camera parameters
 	local far_z = camera.get_far_z(msg.url("/camera#camera"))
 	local near_z = camera.get_near_z(msg.url("/camera#camera"))
 	dof.set_camera_params(near_z, far_z)

@@ -14,8 +14,7 @@ function init(self)
 	-- ==================================================================
 	-- DOF - Settings
 	-- ==================================================================
-	-- Camera parameters for depth linearization (must match camera settings in main.collection)
-	-- near_z: 0.1, far_z: 1000.0 from camera component
+	-- Camera parameters
 	local far_z = camera.get_far_z(msg.url("/camera#camera"))
 	local near_z = camera.get_near_z(msg.url("/camera#camera"))
 	dof.set_camera_params(near_z, far_z)
@@ -31,13 +30,13 @@ function init(self)
 
 	-- DoF Mode Selection:
 	-- Mode 0: Depth-only (default) - focuses entire depth planes
-	--dof.set_dof_mode(0)
+	-- dof.set_dof_mode(0)
 
 	-- Mode 1: Radial hybrid - combines depth with screen-space distance for localized focus
-	--dof.set_dof_mode(1, 18.0) -- 2.0 is screen-space weight (higher = stronger screen-space influence)
+	-- dof.set_dof_mode(1, 18.0) -- 2.0 is screen-space weight (higher = stronger screen-space influence)
 
 	-- Mode 2: Circular region - sharp focus in a screen-space circle around cursor
-	--dof.set_dof_mode(2, nil, 0.15) -- 0.15 is focus radius (0.0-1.0)
+	-- dof.set_dof_mode(2, nil, 0.15) -- 0.15 is focus radius (0.0-1.0)
 
 	-- Gaussian blur settings
 	-- gaussian_sigma: controls blur strength  2.0 for balanced quality
