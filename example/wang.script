@@ -52,7 +52,8 @@ function init(self)
 end
 
 function update(self, dt)
-	msg.post("@render:", "draw_text", { text = "CLICK ON SCREEN / Mode: " .. mode, position = vmath.vector3(20, 50, 0) })
+	msg.post("@render:", "draw_text", { text = "CLICK ON SCREEN to focus / 1-3 Keys to Mode: " .. mode, position = vmath.vector3(20, 50, 0) })
+	msg.post("@render:", "draw_text", { text = "Hold right mouse button to rotate camera", position = vmath.vector3(20, 30, 0) })
 end
 
 function on_input(self, action_id, action)

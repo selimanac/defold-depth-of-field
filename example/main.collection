@@ -65,7 +65,7 @@ embedded_instances {
   "  material: \\\"/example/materials/model_instanced.material\\\"\\n"
   "  textures {\\n"
   "    sampler: \\\"tex0\\\"\\n"
-  "    texture: \\\"/example/assets/images/kenney_prototype-textures/PNG/Dark/texture_01.png\\\"\\n"
+  "    texture: \\\"/example/assets/images/kenney_prototype-textures/PNG/Light/texture_07.png\\\"\\n"
   "  }\\n"
   "}\\n"
   "create_go_bones: false\\n"
