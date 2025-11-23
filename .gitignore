@@ -10,7 +10,8 @@ Thumbs.db
 .cproject
 builtins
 compile_commands.json
-*.der
+manifest.private.der
+manifest.public.der
 RELEASE-NOTES.md
 *.sublime-project
 *.sublime-workspace
