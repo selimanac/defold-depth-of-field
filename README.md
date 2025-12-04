@@ -105,6 +105,36 @@ local dof = require("dof.dof")
 dof.set_camera_params(0.1, 1000.0)
 ```
 
+#### `dof.set_dof_mode(mode, screen_weight,focus_radius)`
+ Set the DoF calculation mode and screen-space parameters. Choose between depth-only DoF or hybrid modes that combine depth with screen-space distance.
+
+Modes:
+- 0 (Depth-only): Focuses entire depth planes. All objects at same depth are equally focused.
+- 1 (Radial hybrid): Combines depth difference with screen-space distance from focus point. More localized focus. Use screen_weight to control influence (higher = stronger screen-space effect).
+- 2 (Circular region): Sharp focus in a circular screen region around cursor, blurred elsewhere based on depth.  Use focus_radius to control the sharp region size.
+
+**Parameters:**
+- `mode` (number):  DoF mode: 0=depth-only (default), 1=radial hybrid, 2=circular region
+- `screen_weight` (number): (optional) Screen-space influence weight for radial hybrid mode (default: 2.0)
+- `focus_radius` (number): (optional) Screen-space radius for circular region mode (default: 0.15, range: 0.0-1.0)
+
+
+**Example:**
+```lua
+local dof = require("dof.dof")
+-- Depth-only mode (default)
+dof.set_dof_mode(0)
+
+-- Radial hybrid mode with custom weight
+dof.set_dof_mode(1, 3.0)  -- Stronger screen-space influence
+
+-- Circular region mode with custom radius
+dof.set_dof_mode(2, nil, 0.2)  -- Larger sharp focus area
+
+```
+
+
+
 #### `dof.set_gaussian_blur(sigma, kernel_size)`
 Configure Gaussian blur parameters (recommended).
 

@@ -15,7 +15,3 @@ render_resources {
   name: "dof"
   path: "/dof/materials/dof.material"
 }
-render_resources {
-  name: "dof_render_target"
-  path: "/dof/materials/render_target/render_target.material"
-}
